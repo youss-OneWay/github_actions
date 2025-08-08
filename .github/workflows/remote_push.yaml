@@ -18,5 +18,3 @@ create_commit:
         pytest >> log_pytest.txt
         ls -a
         git add .
-        git commit -m "random file from action"
-        git push
