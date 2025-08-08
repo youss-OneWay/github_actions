@@ -18,6 +18,8 @@ jobs:
           git checkout master
           git branch --set-upstream-to=origin/master
           git pull
+        name: Run tests
+        run: |
           pytest >> log_pytest.txt
           ls -a
           git add .
