@@ -6,8 +6,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Push a file to our repository
-        run: |
+       - name: Install pytest and flake8
+         run: |
+          pip install pytest
+       - name: Push a file to our repository
+         run: |
           pwd
           ls -a 
           git init
@@ -18,8 +21,6 @@ jobs:
           git checkout master
           git branch --set-upstream-to=origin/master
           git pull
-      - name: Run tests
-        run: |
           pytest >> log_pytest.txt
           ls -a
           git add .
