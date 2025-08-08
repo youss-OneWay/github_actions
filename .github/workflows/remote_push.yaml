@@ -12,8 +12,8 @@ create_commit:
         git config --global user.email "my-bot@bot.com"
         git config --global user.name "my-bot"
         git fetch
-        git checkout main
-        git branch --set-upstream-to=origin/main
+        git checkout master
+        git branch --set-upstream-to=origin/master
         git pull
         pytest >> log_pytest.txt
         ls -a
